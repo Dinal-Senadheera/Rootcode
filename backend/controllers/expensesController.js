@@ -28,10 +28,6 @@ const createExpense = async (req,res) => {
 
     let emptyFields = [];
 
-  if (!total > 0) {
-    emptyFields.push('total');
-    return res.status(400).json({ error: 'Invalid total', emptyFields });
-  }
   if (!Title) {
     emptyFields.push('Title');
   }
